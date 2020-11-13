@@ -1,4 +1,5 @@
 {
+  "homepage":"https://juanpfrancos.github.io/CRUD-Products---React---Django-Rest-Framework",
   "name": "react-base-template",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx webpack-dev-server",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build"
   },
   "keywords": [],
   "author": "Juanpfrancos",
@@ -18,6 +21,7 @@
     "@babel/preset-react": "7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.2",
     "webpack": "4.44.2",
