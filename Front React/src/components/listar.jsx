@@ -46,12 +46,11 @@ const fetchData = () => {
   
     return (
         <>
-          <h1>Productos</h1>
-          <Button variant="contained" color="primary" type="submit" component={Link} to="/add" className={classes.button}>
-              Agregar Producto
-          </Button>
-
-                  <TableContainer component={Paper}>
+              <h1>Productos</h1>
+              <Button variant="contained" color="primary" type="submit" component={Link} to="/add" className={classes.button}>
+                  Agregar Producto
+              </Button>
+              <TableContainer component={Paper}>
                 <Table className={classes.table} aria-label="simple table">
                   <TableHead>
                     <TableRow>
@@ -64,9 +63,7 @@ const fetchData = () => {
                   <TableBody>
                     {data.map((data) => (
                       <TableRow key={data.id}>
-                        <TableCell component="th" scope="row">
-                          {data.id}
-                        </TableCell>
+                        <TableCell>{data.id}</TableCell>
                         <TableCell>{data.name}</TableCell>
                         <TableCell>{data.price}</TableCell>
                         <TableCell>{data.reference}</TableCell>
