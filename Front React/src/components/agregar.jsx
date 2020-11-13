@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,17 +11,16 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
-}));
-
-
+}))
 
 function Add(){
+    let history = useHistory();
 
     const [data, setData] = useState({
       name: '',
       price: '',
       reference: '',
-    });
+    })
 
     const inputChange = (event) =>{
       setData({
@@ -40,8 +38,9 @@ function Add(){
       .catch(function (error)  {
         console.log(error);
       })
-      
+      history.push("/");
     }
+
     const classes = useStyles();
     return (
         <>
@@ -52,9 +51,6 @@ function Add(){
             <TextField id="outlined-basic" label="Referencia" variant="outlined" name="reference" onChange={inputChange}/>
             <Button variant="contained" color="primary" type="submit">
               Guardar
-            </Button>
-            <Button variant="contained" color="primary" type="submit" component={Link} to="/">
-              Inicio
             </Button>
         </form>
         </>
