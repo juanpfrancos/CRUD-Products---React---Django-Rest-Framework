@@ -1,5 +1,5 @@
 {
-  "homepage":"https://juanpfrancos.github.io/CRUD-Products---React---Django-Rest-Framework",
+  "homepage": "https://juanpfrancos.github.io/CRUD-Products---React---Django-Rest-Framework",
   "name": "react-base-template",
   "version": "1.0.0",
   "description": "",
@@ -9,7 +9,7 @@
     "dev": "npx webpack-dev-server",
     "build": "npx webpack",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Juanpfrancos",
@@ -31,7 +31,10 @@
   "dependencies": {
     "@babel/runtime": "^7.12.5",
     "@material-ui/core": "^4.11.0",
+    "@material-ui/data-grid": "^4.0.0-alpha.9",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.21.0",
+    "clsx": "^1.1.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-router-dom": "^5.2.0"

@@ -14,10 +14,8 @@ function Listar(){
 
 const [data, setData] = useState([]);
 
-useEffect(() => {
-      
-      fetchData();
-
+useEffect(()=>{  
+    fetchData();
     }, []);
     
 const fetchData = () => {
